@@ -1,3 +1,7 @@
+---
+base_model: google/gemma-2b
+library_name: peft
+---
 
 # Model Card for Gemma 2 Multi-Task Translation Model
 
@@ -21,8 +25,8 @@ The model achieves **state-of-the-art scores** across evaluation datasets.
 - **Finetuned from:** `google/gemma-2-2b`
 
 ### Model Sources
-- **Repository:** [GitHub Link](https://github.com/your-repo)
-- **Hugging Face Model:** [Model Link](https://huggingface.co/your-hf-model)
+- **Repository:** [GitHub Link](https://github.com/revanthkumar1999/Gemma-multi-tasking-translation)
+- **Hugging Face Model:** [Model Link](https://huggingface.co/revanthkumar1999/gemma-2-Indian_languages-to-eng)
 
 ## Uses
 
@@ -61,6 +65,7 @@ outputs = model.generate(**inputs, max_new_tokens=200)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 ```
 
+
 ## Training Details
 
 ### Training Data
@@ -90,8 +95,8 @@ print(tokenizer.decode(outputs[0], skip_special_tokens=True))
 | Metric       | Score |
 |--------------|-------|
 | BLEU         | 87%   |
-| METEOR       | 91    |
-| ROUGE        | 90    |
+| METEOR       | 91%   |
+| ROUGE        | 90%   |
 
 ### Results Summary
 The model demonstrated strong performance across all four language pairs, with balanced accuracy and fluency, benefiting from the shared multilingual fine-tuning process.
@@ -99,7 +104,7 @@ The model demonstrated strong performance across all four language pairs, with b
 ## Environmental Impact
 - **Hardware Type:** NVIDIA RTX 4090
 - **Training Time:** ~10 hours
-- **Location:** [Your City, State]
+- **Location:** [San Jose, CA]
 - **Carbon Emitted:** ~5.3 kg CO₂eq (estimated)
 
 ## Technical Specifications
